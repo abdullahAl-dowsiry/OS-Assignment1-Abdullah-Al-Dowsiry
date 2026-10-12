@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Abdullah Feyaz Al-Dowsiry] |
+| **Student ID** | [445050221] |
+| **University Email** | [445050221@std.psau.edu.sa] |
+| **GitHub Username** | [AbdullahAl-dowsiry] |
+| **Repository Link** | [https://github.com/abdullahAl-dowsiry/OS-Assignment1-Abdullah-Al-Dowsiry] |
  
 ---
 
@@ -129,68 +129,88 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 3, 2026]
+
+**What I did**: Added process priority.
 
 **Details**:
+- Added a priority from 1 to 10 for each process
+- Displayed the priority in the ready queue
+- Tested the program
 
-**Challenges**:
+**Challenges**: The constructor and priority method did not match at first.
 
-**Solution**:
+**Solution**: Updated the constructor and added `getPriority()`.
 
-**Time spent**:
+**Time spent**: About 1 hour
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 3, 2026]
+
+**What I did**: Tested Feature 1 and created the Git commit.
 
 **Details**:
+- Compiled and ran the program
+- Checked that priority appeared correctly
+- Committed the feature to Git
 
-**Challenges**:
+**Challenges**: I made some filename and capitalization mistakes.
 
-**Solution**:
+**Solution**: Corrected the filename and tested the program again.
 
-**Time spent**:
+**Time spent**: About 45 minutes
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 4, 2026, 6:00 PM]
+
+**What I did**: Added the context switch counter.
 
 **Details**:
+- Added `contextSwitches`
+- Increased it when a process started running
+- Printed the total at the end
 
-**Challenges**:
+**Challenges**: I was not sure where to increase the counter.
 
-**Solution**:
+**Solution**: Added `contextSwitches++` before `currentThread.start()`.
 
-**Time spent**:
+**Time spent**: About 40 minutes
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 4, 2026]
+
+**What I did**: Added waiting time tracking and the final summary table.
 
 **Details**:
+- Tracked waiting time for each process
+- Added a list to keep all processes
+- Printed burst time, waiting time, and turnaround time
 
-**Challenges**:
+**Challenges**: `List` and `ArrayList` caused compile errors.
 
-**Solution**:
+**Solution**: Added the missing imports and tested the program again.
 
-**Time spent**:
+**Time spent**: About 1 hour
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 5, 2026]
+
+**What I did**: Reviewed the project and worked on `MY_WORK.md`.
 
 **Details**:
+- Checked my student information
+- Checked my GitHub repository
+- Started completing the development log
 
-**Challenges**:
+**Challenges**: I needed to make sure the information matched my project.
 
-**Solution**:
+**Solution**: I checked the code and GitHub before filling the file.
 
-**Time spent**:
+**Time spent**: About 30 minutes
 
 ---
 
@@ -211,13 +231,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment:** About 4 hours
 
-**Most challenging part**:
+**Most challenging part:** Tracking waiting time because I had to update the time when a process entered and left the ready queue.
 
-**Most interesting learning**:
+**Most interesting learning:** I learned how Round-Robin scheduling works with threads and how processes are re-queued when they do not finish.
 
-**What I would do differently next time**:
+**What I would do differently next time:** I would test each small change immediately to find errors faster and avoid making many changes before compiling.
 
 ---
 
@@ -237,7 +257,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I learned that threads can run tasks inside the same program. Each process in this assignment used a thread. I learned how `start()` begins a thread and `join()` waits for it. I also understood how the time quantum controls CPU time. This assignment helped me understand Round-Robin scheduling better.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -245,7 +265,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most challenging part was tracking the waiting time. I had to know when a process entered the ready queue. I also had some errors with `List` and `ArrayList`. I fixed them by adding the missing imports. After that, I tested the program and the summary worked correctly.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +273,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I solved the problems step by step. I compiled the program after each change. When I saw an error, I checked the message and fixed it. I corrected some constructor, import, and capitalization mistakes. Testing after every change helped me finish the assignment.]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +281,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading can be used in many real applications. For example, a web server can handle many users at the same time. An operating system can also use threads to manage different tasks. Threads can make programs more responsive and efficient. This assignment helped me understand how this works in practice.]
 
 ### Optional: What would you like to learn more about?
 
@@ -293,7 +313,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A process is a program running by itself. A thread is a smaller part of a process. Processes have separate memory, but threads can share memory. In this assignment, threads were used to run and control the processes.]
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,15 +325,19 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[If a process does not finish during its time quantum, it goes back to the ready queue. For example, P3 had a burst time of 5136 ms and the time quantum was 3000 ms, so it was re-queued once. This gives other processes a chance to use the CPU. Round-Robin is fair because each process gets a turn.]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[P3 completed quantum 3000ms
+Remaining time: 2136ms
+P3 yields CPU for context switch
+P3 added to ready queue | Burst time: 5136ms | Priority: 4
+Ready Queue: [P5 -> P6 -> P7 -> P8 -> P9 -> P10 -> P11 -> P12 -> P13 -> P14 -> P15 -> P3]]
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+[P3 did not finish in the first time quantum. It used 3000 ms and still had time remaining. Because of that, it was added back to the ready queue. This allowed the other processes to get their turn.]
 
 ## Question 3: Thread Lifecycle
 
@@ -323,15 +347,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [P1 is New when its thread is created.]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [P1 becomes Runnable after `Thread.start()`.]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [P1 is Running when its `run()` method starts.]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [P1 waits while `Thread.sleep()` is running.]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 is Terminated when the `run()` method finishes.]
 
 ## Question 4: Real-World Applications
 
@@ -341,21 +365,21 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): [CPU Scheduling]
 
 **Description**:
-[Describe the real-world scenario.]
+[An operating system can use Round-Robin to share CPU time between running programs. Each program is like a process in our simulation, and each gets a time quantum.]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[It is fair because every process gets a turn. Moving from one process to another is a context switch.]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Web Server]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[A web server can handle many user requests using threads. Each request can get a short turn to run.]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[It keeps the server responsive and stops one request from using all the CPU time. Switching between requests is similar to the context switches in our assignment.]
 
 ## Summary
 
